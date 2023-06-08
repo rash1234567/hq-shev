@@ -1,0 +1,38 @@
+ .anticon {
+   font-weight: 900;
+   font-size: 18px;
+   cursor: pointer;
+ }
+
+ .menu-icondiv>.anticon {
+   font-weight: 900;
+   font-size: 25px;
+   cursor: pointer;
+ }
+
+ .nav {
+   transition: 0.5s ease-in-out;
+ }
+
+ .page-title {
+   --tw-text-opacity: 1;
+   color: #021645;
+   font-weight: 600;
+   font-size: 32px;
+ }
+
+ .primary {
+   background-color: #552AC1;
+ }
+
+ @media (min-width: 1280px) {
+   .page-title {
+     font-size: 2.2vw;
+   }
+ }
+
+ @media screen and (min-width:1024px) {
+   .anticon {
+     font-size: 1.4vw;
+   }
+ }

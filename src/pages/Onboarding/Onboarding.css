@@ -1,0 +1,32 @@
+
+.slick-dots{
+    justify-content: flex-start !important;
+    margin-left: 7% !important;
+    margin-bottom: 7% !important;  
+  }
+
+  .slick-dots>li{
+    background-color: #552ac131 ;
+    width: 10px !important;
+  }
+  .slick-active>button{
+    background-color: #552AC1 !important;  
+    width: 15px !important; 
+  }
+  .onboarding-carousel{
+    background-image: url("../../Assets/Images/carousel-bg.png");
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+
+  .codediv > .ant-input-group >.ant-input{
+    height:3.5rem !important;
+    border-radius: 0.5rem !important;
+} 
+@media screen and (min-width: 768px) {
+    .slick-dots{
+        justify-content: flex-start !important;
+        margin-left: 20% !important;
+        margin-bottom: 7% !important;  
+    }
+}

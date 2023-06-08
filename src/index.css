@@ -1,3 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+    .label {
+        @apply font-normal text-xs leading-[135%];
+    }
+
+    .body-small {
+        @apply font-normal text-sm;
+    }
+
+    .body-default {
+        @apply font-normal text-base leading-normal;
+    }
+
+    .body-large {
+        @apply font-normal text-lg leading-[155%];
+    }
+
+    .default-button {
+        @apply font-medium text-base leading-[140%];
+    }
+
+    .small-button {
+        @apply font-medium text-sm leading-[145%];
+    }
+
+    .title-6 {
+        @apply font-bold text-xs leading-[135%];
+    }
+
+    .title-5 {
+        @apply font-semibold text-base leading-normal;
+    }
+
+    .title-4 {
+        @apply font-semibold text-xl leading-[140%];
+    }
+
+    .title-3 {
+        @apply font-bold text-[1.75rem] leading-[140%];
+    }
+
+    .title-2 {
+        @apply font-semibold text-[2rem] leading-[150%];
+    }
+
+    .title-1 {
+        @apply font-bold text-[2.5rem] leading-[140%];
+    }
+
+    .hero-heading {
+        @apply font-extrabold text-[4.75rem] tracking-tighter leading-[5.5rem];
+    }
+
+    .text-16 {
+        @apply text-[16px];
+    }
+}
+
+.ant-dropdown {
+    width: 100%;
+    position: absolute !important;
+    z-index: 1;
+}
+
+.ant-dropdown-menu {
+    width: 100% !important;
+}
