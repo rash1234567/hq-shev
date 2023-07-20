@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Modal, Upload, Button } from "antd";
 import {
-  InboxOutlined,
-  FileOutlined,
   CloseCircleOutlined,
 } from "@ant-design/icons";
 import { UploadFile } from "antd/lib/upload/interface";
@@ -14,6 +12,10 @@ function UploadDocument() {
   //   console.log(info);
 
   // };
+  const handleDownload = () => {
+    const fileUrl = 'https://example.com/file.pdf';
+    window.location.href = fileUrl;
+  };
   const [openModal, setOpenModal] = useState(false);
 
   return (
@@ -33,7 +35,7 @@ function UploadDocument() {
         <ol className="list-decimal ml-[4%] w-[80%] w-[100%] font-normal ">
           <li>
             Download this{" "}
-            <span className="underline text-[#5D5FEF]">template</span> we have
+            <span className="underline text-[#5D5FEF]" onClick={handleDownload}>template</span> we have
             created{" "}
           </li>
           <li>Edit your statement into the template</li>

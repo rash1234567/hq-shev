@@ -4,12 +4,14 @@ import noFile from './noFile.svg';
 import UploadDocument from "./Components/UploadDocument";
 import { Menu, Dropdown, message, Button } from "antd";
 import vectorOpen from "../../Assets/Icons/Vectoropen.svg";
-import { trialBalance } from "./dummyData";
+// import { trialBalance } from "./dummyData";
 import { DownOutlined } from '@ant-design/icons';
 import contentCopy from "../../Assets/Icons/content_copy.svg";
 import pencil from "../../Assets/Icons/Vector (1).svg";
 
+
 function FinancialStatement() {
+  let trialBalance: any = []
   const [transaction, setTransaction] = useState(null);
   const handleEdit = () => {
     console.log("clicked");
@@ -91,47 +93,9 @@ function FinancialStatement() {
             </div>
             <hr />
             <div className="min-h-full md:min-h-[60vh]">
-              {trialBalance.length < 1 ? (
-                <div className="h-[100%] w-full flex flex-col items-center justify-center  py-[5%]">
-                  {/* <img src={Loading} alt="" />
-                  <span className="mx-auto text-center w-[30%] mt-[0.9vw]">
-                    We are generating your trial balance. This might take 5
-                    minutes.
-                  </span> */}
-                  <div className="w-[90%] bg-[#FFFCEB] flex py-4 px-8 rounded-lg mt-[3vw]">
-                    <div>
-                      <h3 className="text-[#021645] text-[28px] xl:text-[1.6vw] font-[700]">
-                        While you wait...
-                      </h3>
-                      <p className="text-[#414141] text-[16px] leading-[23px] xl:leading-[1.8vw] xl:text-[1.1vw] font-[400]">
-                        {" "}
-                        Invite other businesses from your community to get free
-                        3 months worth of subscription
-                      </p>
-                      <div className="flex items-center mt-[1vw] ">
-                        <span className="flex items-center border border-solid border-[#D4DDE2] py-2 px-3 rounded-lg h-full">
-                          <input
-                            value={link}
-                            readOnly
-                            className="outline-none border-none"
-                          />
-                          {/* <CopyOutlined onClick={handleCopyLink} /> */}
-                          <img src={contentCopy} alt="copy button" />
-                          <span className="text-sm">Copy link</span>
-                        </span>
-                        <button
-                          className="text-sm py-2 px-3 primary text-white rounded-lg ml-2"
-                          onClick={handleInviteByEmail}
-                        >
-                          Invite via Email
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ) : (
+
                 <div className="w-full px-2 overflow-y-scroll h-[60vh]">
-                  {trialBalance.map((item, index) => (
+                {trialBalance?.map((item: any, index: number) => (
                     <div key={index}>
                       <div
                         className="w-full flex items-center py-3 px-4 bg-[#EFF3FB]"
@@ -147,7 +111,7 @@ function FinancialStatement() {
                         />
                       </div>
                       <div>
-                        {item.subs.map((sub, subIndex) => (
+                      {item.subs.map((sub: any, subIndex: any) => (
                           <div
                             key={subIndex}
                             className="grid grid-cols-3 gap-4 text-[14px] xl:text-[1vw]  font-semibold text-[#4C5259] px-4 my-4"
@@ -169,8 +133,7 @@ function FinancialStatement() {
                       </div>
                     </div>
                   ))}
-                </div>
-              )}
+              </div>
             </div>
           </div>
         </div>
@@ -184,17 +147,17 @@ export default FinancialStatement
 
   // < div className = " min-h-[80vh] col-span-3 xl:col-span-1 border border-solid border-gray-300 rounded-lg p-3" >
   //         <h3 className='py-1 xl:py-[1vw] text-[#021645] text-[20px] xl:text-[1.2vw] font-[600]'>Statements Created</h3>
-  //         <div>
-  //           {
-  //             [1, 2, 3].map((item) => (
-  //               <div key={item} className='flex'>
-  //                 {/* <img src={ } alt="wait icon" /> */}
-  //                 <span>
-  //                   <span>title</span>
-  //                   <span>tap to open</span>
-  //                 </span>
-  //               </div>
-  //             ))
-  //           }
-  //         </div>
+          // <div>
+          //   {
+          //     [1, 2, 3].map((item) => (
+          //       <div key={item} className='flex'>
+          //         {/* <img src={ } alt="wait icon" /> */}
+          //         <span>
+          //           <span>title</span>
+          //           <span>tap to open</span>
+          //         </span>
+          //       </div>
+          //     ))
+          //   }
+          // </div>
   //       </div >
